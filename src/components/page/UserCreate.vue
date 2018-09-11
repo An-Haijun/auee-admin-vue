@@ -47,6 +47,7 @@ export default {
     name: "userCreate",
     data() {
         return {
+            userInfo: JSON.parse(localStorage.getItem("userInfo")),
             userForm: {
                 username: "",
                 password: "",
@@ -76,7 +77,10 @@ export default {
     },
     methods: {
         getUserIdentityFun() {
-            getUserIdentity()
+            const params = {
+                identity_type: this.userInfo.identity_type
+            }
+            getUserIdentity(params)
                 .then(res => {
                     if (res.row.success) {
                         this.userIdentityLists = res.data;

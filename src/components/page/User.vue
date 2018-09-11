@@ -52,6 +52,7 @@ export default {
     // name: "article",
     data() {
         return {
+            userInfo: JSON.parse(localStorage.getItem("userInfo")),
             url: "./static/vuetable.json",
             identityId: "",
             userNameAndName: "",
@@ -102,7 +103,10 @@ export default {
             this.getUsers();
         },
         getUserIdentityFun() {
-            getUserIdentity()
+            const params = {
+                identity_type: this.userInfo.identity_type
+            }
+            getUserIdentity(params)
                 .then(res => {
                     if (res.row.success) {
                         this.userIdentityLists = res.data;
@@ -120,7 +124,7 @@ export default {
             let params = {
                 page_size: 8,
                 page: this.cur_page,
-                user_id: JSON.parse(localStorage.getItem("userInfo")).id,
+                user_id: this.userInfo.id,
                 user_identity_id: this.identityId.split("#")[0],
                 name: this.userNameAndName,
                 user_name: this.userNameAndName
