@@ -23,35 +23,35 @@ export default new Router({
                 },
                 {
                     path: '/articleCreate',
-                    component: resolve => require(['../components/page/ArticleCreate.vue'], resolve),
+                    component: resolve => require(['../components/page/article/ArticleCreate.vue'], resolve),
                     meta: {
                         title: '写文章'
                     }
                 },
                 {
                     path: '/article',
-                    component: resolve => require(['../components/page/Article.vue'], resolve),
+                    component: resolve => require(['../components/page/article/Article.vue'], resolve),
                     meta: {
                         title: '文章列表'
                     }
                 },
                 {
                     path: '/articleType',
-                    component: resolve => require(['../components/page/ArticleType.vue'], resolve),
+                    component: resolve => require(['../components/page/article/ArticleType.vue'], resolve),
                     meta: {
                         title: '文章类型'
                     }
                 },
                 {
                     path: '/articleClass',
-                    component: resolve => require(['../components/page/ArticleClass.vue'], resolve),
+                    component: resolve => require(['../components/page/article/ArticleClass.vue'], resolve),
                     meta: {
                         title: '文章分类'
                     }
                 },
                 {
                     path: '/articleOpen',
-                    component: resolve => require(['../components/page/ArticleOpen.vue'], resolve),
+                    component: resolve => require(['../components/page/article/ArticleOpen.vue'], resolve),
                     props: {articleId: null},
                     meta: {
                         title: '查看文章'
@@ -59,28 +59,28 @@ export default new Router({
                 },
                 {
                     path: '/articleEdit',
-                    component: resolve => require(['../components/page/ArticleEdit.vue'], resolve),
+                    component: resolve => require(['../components/page/article/ArticleEdit.vue'], resolve),
                     meta: {
                         title: '文章编辑'
                     }
                 },
                 {
                     path: '/user',
-                    component: resolve => require(['../components/page/User.vue'], resolve),
+                    component: resolve => require(['../components/page/user/User.vue'], resolve),
                     meta: {
                         title: '用户列表'
                     }
                 },
                 {
                     path: '/userCreate',
-                    component: resolve => require(['../components/page/UserCreate.vue'], resolve),
+                    component: resolve => require(['../components/page/user/UserCreate.vue'], resolve),
                     meta: {
                         title: '添加用户'
                     }
                 },
                 {
                     path: '/userEdit',
-                    component: resolve => require(['../components/page/UserEdit.vue'], resolve),
+                    component: resolve => require(['../components/page/user/UserEdit.vue'], resolve),
                     meta: {
                         title: '编辑用户'
                     }

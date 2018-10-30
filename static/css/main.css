@@ -26,10 +26,12 @@ a {
     right: 0;
     top: 50px;
     bottom: 0;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     -webkit-transition: left .3s ease-in-out;
     transition: left .3s ease-in-out;
     background: #f0f0f0;
+    box-sizing: border-box;
+    padding: 24px;
 }
 
 .content {
